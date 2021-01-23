@@ -100,6 +100,8 @@ namespace Microsoft.CodeAnalysis.CSharp.Debugging
             }
         }
 
+        public static IList<string> GetProximityExpressions(SyntaxTree syntaxTree, int position) => Do(syntaxTree, position);
+
         // Internal for testing purposes
         internal static IList<string> Do(SyntaxTree syntaxTree, int position)
             => Do(syntaxTree, position, CancellationToken.None);
